@@ -1,0 +1,790 @@
+@import url(//fonts.googleapis.com/css?family=Ubuntu:300,400,500);
+
+body {
+    font-family: "Ubuntu", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+i.fa {
+    margin-right: 5px;
+}
+
+header {
+    background-color: #f3b8964d;
+}
+
+#about {
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .features-img {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .features-img {
+        width: 200px;
+    }
+}
+@media screen and (max-width: 768px) {
+[data-aos-delay] {
+    transition-delay: 0 !important;
+}
+}
+#hero img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+transition: all 0.5s;
+background: #fff;
+z-index: 997;
+padding: 15px 0;
+border-bottom: 1px solid #e6f2fb;
+}
+
+#header.header-scrolled {
+border-color: #fff;
+box-shadow: 0px 2px 15px rgba(18, 66, 101, 0.08);
+}
+
+#header .logo {
+font-size: 28px;
+margin: 0;
+padding: 0;
+line-height: 1;
+font-weight: 300;
+letter-spacing: 0.5px;
+font-family: "Poppins", sans-serif;
+}
+
+#header .logo a {
+color: #16507b;
+}
+
+#header .logo img {
+max-height: 40px;
+}
+
+@media (max-width: 992px) {
+#header .logo {
+    font-size: 28px;
+}
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+padding: 0;
+}
+
+.navbar ul {
+margin: 0;
+padding: 0;
+display: flex;
+list-style: none;
+align-items: center;
+}
+
+.navbar li {
+position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px 0 10px 30px;
+font-size: 14px;
+color: #16507b;
+white-space: nowrap;
+transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+font-size: 12px;
+line-height: 0;
+margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+color: #2487ce;
+}
+
+.navbar .getstarted,
+.navbar .getstarted:focus {
+background: #2487ce;
+padding: 8px 20px;
+margin-left: 30px;
+border-radius: 4px;
+color: #fff;
+}
+
+.navbar .getstarted:hover,
+.navbar .getstarted:focus:hover {
+color: #fff;
+background: #3194db;
+}
+
+.navbar .dropdown ul {
+display: block;
+position: absolute;
+left: 14px;
+top: calc(100% + 30px);
+margin: 0;
+padding: 10px 0;
+z-index: 99;
+opacity: 0;
+visibility: hidden;
+background: #fff;
+box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+transition: 0.3s;
+border-radius: 4px;
+}
+
+.navbar .dropdown ul li {
+min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+padding: 10px 20px;
+text-transform: none;
+}
+
+.navbar .dropdown ul a i {
+font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+color: #2487ce;
+}
+
+.navbar .dropdown:hover>ul {
+opacity: 1;
+top: 100%;
+visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+top: 0;
+left: calc(100% - 30px);
+visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+opacity: 1;
+top: 0;
+left: 100%;
+visibility: visible;
+}
+
+@media (max-width: 1366px) {
+.navbar .dropdown .dropdown ul {
+    left: -90%;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
+}
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+color: #124265;
+font-size: 28px;
+cursor: pointer;
+display: none;
+line-height: 0;
+transition: 0.5s;
+}
+
+.mobile-nav-toggle.bi-x {
+color: #fff;
+}
+
+@media (max-width: 991px) {
+.mobile-nav-toggle {
+    display: block;
+}
+
+.navbar ul {
+    display: none;
+}
+}
+
+.navbar-mobile {
+position: fixed;
+overflow: hidden;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+background: rgba(10, 38, 58, 0.9);
+transition: 0.3s;
+z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+position: absolute;
+top: 15px;
+right: 15px;
+}
+
+.navbar-mobile ul {
+display: block;
+position: absolute;
+top: 55px;
+right: 15px;
+bottom: 15px;
+left: 15px;
+padding: 10px 0;
+background-color: #fff;
+overflow-y: auto;
+transition: 0.3s;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+padding: 10px 20px;
+font-size: 15px;
+color: #124265;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+color: #2487ce;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+margin: 15px;
+}
+
+.navbar-mobile .dropdown ul {
+position: static;
+display: none;
+margin: 10px 20px;
+padding: 10px 0;
+z-index: 99;
+opacity: 1;
+visibility: visible;
+background: #fff;
+box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.navbar-mobile .dropdown ul li {
+min-width: 200px;
+}
+
+.navbar-mobile .dropdown ul a {
+padding: 10px 20px;
+}
+
+.navbar-mobile .dropdown ul a i {
+font-size: 12px;
+}
+
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover>a {
+color: #2487ce;
+}
+
+.navbar-mobile .dropdown>.dropdown-active {
+display: block;
+}
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url("image-background.png") top center;
+    background-size: cover;
+    position: relative;
+}
+
+#hero:before {
+    content: '';
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#hero .hero-container {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 15px;
+}
+
+#hero h3 {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 26px;
+    padding: 10px 30px;
+    margin-bottom: 30px;
+    border-radius: 50px;
+}
+
+#hero h1 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#hero h2 {
+    color: #eee;
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+#hero .btn-get-started {
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 30px 9px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+#hero .btn-get-started:hover {
+    background: #e43c5c;
+    border: 2px solid #e43c5c;
+}
+
+@media (min-width: 1024px) {
+    #hero {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero h3 {
+        font-size: 22px;
+    }
+
+    #hero h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    #hero h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-height: 500px) {
+    #hero {
+        height: 150vh;
+    }
+}
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about .content h3 {
+font-weight: 600;
+font-size: 26px;
+}
+
+.about .content ul {
+list-style: none;
+padding: 0;
+}
+
+.about .content ul li {
+padding-bottom: 10px;
+}
+
+.about .content ul i {
+font-size: 20px;
+padding-right: 4px;
+color: #cc1616;
+}
+
+.about .content p:last-child {
+margin-bottom: 0;
+}
+.team .member {
+text-align: center;
+margin-bottom: 20px;
+box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+padding: 30px 20px;
+background: #fff;
+}
+
+.team .member img {
+max-width: 60%;
+border-radius: 50%;
+margin: 0 0 30px 0;
+}
+
+.team .member h4 {
+font-weight: 700;
+margin-bottom: 2px;
+font-size: 18px;
+}
+
+.team .member span {
+font-style: italic;
+display: block;
+font-size: 13px;
+}
+
+.team .member p {
+padding-top: 10px;
+font-size: 14px;
+font-style: italic;
+color: #aaaaaa;
+}
+
+.team .member .social {
+margin-top: 15px;
+}
+
+.team .member .social a {
+color: #919191;
+transition: 0.3s;
+}
+
+.team .member .social a:hover {
+color: #cc1616;
+}
+
+.team .member .social i {
+font-size: 18px;
+margin: 0 2px;
+}
+/* Feature Box
+    ---------------------*/
+    .feature-box-1 {
+        padding: 32px;
+        box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+        margin: 15px 0;
+        position: relative;
+        z-index: 1;
+        border-radius: 10px;
+        overflow: hidden;
+        -moz-transition: ease all 0.35s;
+        -o-transition: ease all 0.35s;
+        -webkit-transition: ease all 0.35s;
+        transition: ease all 0.35s;
+        top: 0;
+    }
+    .feature-box-1 * {
+        -moz-transition: ease all 0.35s;
+        -o-transition: ease all 0.35s;
+        -webkit-transition: ease all 0.35s;
+        transition: ease all 0.35s;
+    }
+    .feature-box-1 .icon {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        background: #fc5356;
+        color: #ffffff;
+        text-align: center;
+        border-radius: 50%;
+        margin-bottom: 22px;
+        font-size: 27px;
+    }
+    .feature-box-1 .icon i {
+        line-height: 70px;
+    }
+    .feature-box-1 h5 {
+        color: #20247b;
+        font-weight: 600;
+    }
+    .feature-box-1 p {
+        margin: 0;
+    }
+    .feature-box-1:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: auto;
+        right: 0;
+        border-radius: 10px;
+        width: 0;
+        background: #20247b;
+        z-index: -1;
+        -moz-transition: ease all 0.35s;
+        -o-transition: ease all 0.35s;
+        -webkit-transition: ease all 0.35s;
+        transition: ease all 0.35s;
+    }
+    .feature-box-1:hover {
+        top: -5px;
+    }
+    .feature-box-1:hover h5 {
+        color: #ffffff;
+    }
+    .feature-box-1:hover p {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .feature-box-1:hover:after {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        left: 0;
+        right: auto;
+    }
+    .section {
+        padding: 100px 0;
+        position: relative;
+    }
+    .section-title {
+        padding-bottom: 45px;
+    }
+    .section-title h2 {
+        font-weight: 700;
+        color: #20247b;
+        font-size: 45px;
+        margin: 0 0 15px;
+        border-left: 5px solid #fc5356;
+        padding-left: 15px;
+    }
+*--------------------------------------------------------------
+# Často kladené otázky
+--------------------------------------------------------------*/
+.faq .faq-list {
+  padding: 0 100px;
+}
+
+.faq .faq-list ul {
+  padding: 0;
+  list-style: none;
+}
+
+.faq .faq-list li+li {
+  margin-top: 15px;
+}
+
+.faq .faq-list li {
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+}
+
+.faq .faq-list a {
+  display: block;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 0 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+.faq .faq-list .icon-help {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  left: 20px;
+  color: #47b2e4;
+}
+
+.faq .faq-list .icon-show,
+.faq .faq-list .icon-close {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.faq .faq-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 0;
+}
+
+.faq .faq-list .icon-show {
+  display: none;
+}
+
+.faq .faq-list a.collapsed {
+  color: #37517e;
+  transition: 0.3s;
+}
+
+.faq .faq-list a.collapsed:hover {
+  color: #47b2e4;
+}
+
+.faq .faq-list a.collapsed .icon-show {
+  display: inline-block;
+}
+
+.faq .faq-list a.collapsed .icon-close {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .faq .faq-list {
+    padding: 0;
+  }
+}
+/* Contact Section - Home Page
+------------------------------*/
+.contact .info-item {
+    background: rgba(var(--default-color-rgb), 0.03);
+    padding: 30px;
+}
+
+.contact .info-item i {
+    font-size: 38px;
+    line-height: 0;
+    color: var(--primary-color);
+}
+
+.contact .info-item h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0 10px 0;
+}
+
+.contact .info-item p {
+    padding: 0;
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.contact .php-email-form {
+    background: rgba(var(--default-color-rgb), 0.03);
+    padding: 30px;
+    height: 100%;
+}
+
+.contact .php-email-form .error-message {
+    display: none;
+    background: #df1529;
+    color: #ffffff;
+    text-align: left;
+    padding: 15px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.contact .php-email-form .sent-message {
+    display: none;
+    color: #ffffff;
+    background: #059652;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+    display: none;
+    background: var(--background-color);
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 24px;
+}
+
+.contact .php-email-form .loading:before {
+    content: '';
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid var(--primary-color);
+    border-top-color: var(--background-color);
+    animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input[type='text'],
+.contact .php-email-form input[type='email'],
+.contact .php-email-form textarea {
+    font-size: 14px;
+    padding: 10px 15px;
+    box-shadow: none;
+    border-radius: 0;
+    color: var(--default-color);
+    background-color: rgba(var(--background-color-rgb), 0.5);
+    border-color: rgba(var(--default-color-rgb), 0.2);
+}
+
+.contact .php-email-form input[type='text']:focus,
+.contact .php-email-form input[type='email']:focus,
+.contact .php-email-form textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.contact .php-email-form input[type='text']::-moz-placeholder,
+.contact .php-email-form input[type='email']::-moz-placeholder,
+.contact .php-email-form textarea::-moz-placeholder {
+    color: rgba(var(--default-color-rgb), 0.3);
+}
+
+.contact .php-email-form input[type='text']::placeholder,
+.contact .php-email-form input[type='email']::placeholder,
+.contact .php-email-form textarea::placeholder {
+    color: rgba(var(--default-color-rgb), 0.3);
+}
+
+.contact .php-email-form button[type='submit'] {
+    background: var(--primary-color);
+    color: var(--contrast-color);
+    border: 0;
+    padding: 10px 30px;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+.contact .php-email-form button[type='submit']:hover {
+    background: rgba(var(--primary-color-rgb), 0.8);
+}
